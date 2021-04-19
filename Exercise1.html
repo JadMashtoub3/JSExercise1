@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+          <input type="text" id="item" placeholder="New item...">
+        <span onclick="newElement()" class="button">Add</span>
+      </form>
+      <ul id="FormUL"> 
+      </ul> 
+<body> 
+    <script>
+          function newElement() {
+
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("item").value;
+            var t = document.createTextNode(inputValue);
+  
+            li.appendChild(t);
+            if (inputValue === '') {
+                alert("Nothing was added to the list");
+            } else {
+                document.getElementById("FormUL").appendChild(li);
+            }
+            document.getElementById("item").value = "";
+        }
+                  
+        
+</script>
+</body>
+</html>
+
